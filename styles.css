@@ -1,5 +1,16 @@
 body {
     background-image: url(pbjt.gif);
     background-size: 100px;
-    color: #fff;
   }
+
+div {
+    height: 100vh;
+}
+
+/*
+h1 {
+    color: #1f0;
+    width: 100vw;
+    font-size: 35vw;
+}
+*/
