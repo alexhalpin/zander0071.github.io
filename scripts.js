@@ -5,17 +5,46 @@ function playSound() {
 
 document.addEventListener('DOMContentLoaded',function(event){
     
-    var dataText = ["C:\\Users\\Alex>"];
+    var dataText = ["cd documents\\projects"];
+
+    /* function typeWriter(el, text) {
+        i = 0;
+
+        if(i < text.length){
+            setTimeout(function(){
+                document.getElementById(el).textContent = text.substring(0, i);
+                typeWriter(el,text){}
+            }, 500);
+
+            
+        }
+    }
+
+    typeWriter("input1", dataText[0]); */
+
     
-    function typeWriter(text, j, fnCallback) {
+
+    
+    
+    function typeWriter(el, text, j) {
       
-        if (j < (text.length)) {
-            document.querySelector("p1").innerHTML = text.substring(0, j+1);
-            setTimeout(function() {typeWriter(text, j+1, fnCallback);}, Math.floor(Math.random() * 500));
+        if (j <= (text.length)) {
+            document.getElementById(el).textContent = text.substring(0, j);
+            setTimeout(function() {
+                typeWriter(el, text, j+1);
+            }, Math.floor(500 * (Math.random() ** 3) + 50));
         }
 
+        if (j == text.length) {
+            setTimeout(function() {
+                document.getElementById("output").textContent = "\n C:\\Users\\Alex\\Documents\\Projects>";
+            }, 500);
+        }
+       
     }
     
-    typeWriter(dataText[0], 0, function(){ typeWriter(j+1);});
+    typeWriter("input1", dataText[0], 0); 
+
+    
 
   });

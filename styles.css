@@ -1,20 +1,15 @@
 body {
     background-color: #3A5D62;
     background-size: 100px;
+    font-family: 'Consolas';
+    color: white;
   }
 
 div {
     height: 100vh;
 }
 
-p1 {
-    font-family: 'Consolas';
-    color: white
-}
-
 .us {
-    font-family: 'Consolas';
-    color: white;
     animation: blinker 1s linear infinite;
 }
 
