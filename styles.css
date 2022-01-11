@@ -1,10 +1,28 @@
 body {
-    background-image: url(pbjt.gif);
+    background-color: #3A5D62;
     background-size: 100px;
   }
 
 div {
     height: 100vh;
+}
+
+p1 {
+    font-family: 'Consolas';
+    color: white
+}
+
+.us {
+    font-family: 'Consolas';
+    color: white;
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    0% {opacity: 1}
+    50% {opacity: 1} 
+    51% {opacity: 0}
+    100% {opacity: 0}
 }
 
 /*
