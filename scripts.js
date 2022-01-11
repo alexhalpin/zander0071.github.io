@@ -5,46 +5,35 @@ function playSound() {
 
 document.addEventListener('DOMContentLoaded',function(event){
     
-    var dataText = ["cd documents\\projects"];
+    var inputText = ["cd documents\\projects", "tree"];
+    var outputText = ["\n C:\\Users\\Alex\\Documents\\Projects>", "\n bruh"]
 
-    /* function typeWriter(el, text) {
-        i = 0;
 
-        if(i < text.length){
-            setTimeout(function(){
-                document.getElementById(el).textContent = text.substring(0, i);
-                typeWriter(el,text){}
-            }, 500);
-
-            
-        }
+    function printout(el, i, fncallback) {
+        document.getElementById(el).textContent = outputText[i];
+        setTimeout(fncallback, 1000);
     }
 
-    typeWriter("input1", dataText[0]); */
-
-    
-
-    
-    
-    function typeWriter(el, text, j) {
+    function typeWriter(el, i, j, fncallback) {
       
-        if (j <= (text.length)) {
-            document.getElementById(el).textContent = text.substring(0, j);
-            setTimeout(function() {
-                typeWriter(el, text, j+1);
-            }, Math.floor(500 * (Math.random() ** 3) + 50));
+        if (j <= (inputText[i].length)) {
+            document.getElementById(el).textContent = inputText[i].substring(0, j);
+            setTimeout(
+                function() {
+                    typeWriter(el, i, j+1, fncallback);
+                }, 
+                Math.floor(400 * (Math.random() ** 3) + 50));
         }
 
-        if (j == text.length) {
-            setTimeout(function() {
-                document.getElementById("output").textContent = "\n C:\\Users\\Alex\\Documents\\Projects>";
-            }, 500);
+        if (j == inputText[i].length) {
+            setTimeout(fncallback, 700);
         }
-       
     }
-    
-    typeWriter("input1", dataText[0], 0); 
 
-    
+    typeWriter("input1", 0, 0, () => 
+    printout("output1", 0, () =>
+    typeWriter("input2", 1, 0, () =>
+    printout("output2", 1))
+    ));
 
   });

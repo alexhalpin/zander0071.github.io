@@ -3,10 +3,11 @@ body {
     background-size: 100px;
     font-family: 'Consolas';
     color: white;
+    
   }
 
-div {
-    height: 100vh;
+span {
+    white-space: pre-line;
 }
 
 .us {
