@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded',function(event){
 
     function printout(el, i, fncallback) {
         document.getElementById(el).innerHTML = outputText[i];
-        setTimeout(fncallback, 1000);
+        setTimeout(fncallback, 750);
     }
 
     function typeWriter(el, i, j, fncallback) {
@@ -76,4 +76,16 @@ document.addEventListener('DOMContentLoaded',function(event){
     speech("bubbletxt", 2, 0)
     )))));
 
-  });
+    document.getElementById("mushbutton").addEventListener("click", () => {togglerainbow();});
+
+    function togglerainbow() {
+        anim = document.getElementById('frog').style.animation;
+        console.log('bruh');
+        if (anim == '5s ease 0s infinite normal none running rainbow'){
+            document.getElementById('frog').style.animation = 'infinite normal none';
+        }else{
+         document.getElementById('frog').style.animation = 'rainbow 5s infinite';
+        }
+
+    }
+ });
