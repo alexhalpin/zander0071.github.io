@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded',function(event){
          
         ];
 
-
     function printout(el, i, fncallback) {
         document.getElementById(el).innerHTML = outputText[i];
         setTimeout(fncallback, 750);
