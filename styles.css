@@ -6,8 +6,35 @@ body {
     
   }
 
+.bubble {
+    position: absolute;
+    bottom: 190px;
+    right: 420px;
+    color: transparent;
+}
+
+.bubbletxt {
+    text-align: left;
+    position: absolute;
+    bottom: 243px;
+    right: 460px;
+}
+
+.art {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
 span {
     white-space: pre-line;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
 }
 
 .us {
