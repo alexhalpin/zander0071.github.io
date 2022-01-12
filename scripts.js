@@ -30,11 +30,11 @@ document.addEventListener('DOMContentLoaded',function(event){
                 function() {
                     typeWriter(el, i, j+1, fncallback);
                 }, 
-                Math.floor(500 * (Math.random() ** 5) + 50));
+                Math.floor(250 * (Math.random() ** 5) + 50));
         }
 
         if (j == inputText[i].length) {
-            setTimeout(fncallback, 700);
+            setTimeout(fncallback, 500);
         }
     }
 
@@ -56,10 +56,10 @@ document.addEventListener('DOMContentLoaded',function(event){
 
     function appear(fncallback) {
         setTimeout( () => {
-            document.getElementById('bubble').style.color = 'white'},2000
+            document.getElementById('bubble').style.color = 'white'},4000
         );
         setTimeout( () => {
-            fncallback();}, 2500
+            fncallback();}, 4500
         );
     }
 
