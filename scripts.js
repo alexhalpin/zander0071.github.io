@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded',function(event){
 
     function appear(fncallback) {
         setTimeout( () => {
-            document.getElementById('bubble').style.color = 'white'},4000
+            document.getElementById('bubble').style.color = '#C08497'},4000
         );
         setTimeout( () => {
             fncallback();}, 4500
@@ -77,14 +77,14 @@ document.addEventListener('DOMContentLoaded',function(event){
 
     document.getElementById("mushbutton").addEventListener("click", () => {togglerainbow();});
 
+    var isrb = 0;
     function togglerainbow() {
-        anim = document.getElementById('frog').style.animation;
-        console.log('bruh');
-        if (anim == '5s ease 0s infinite normal none running rainbow'){
-            document.getElementById('frog').style.animation = 'infinite normal none';
+        if (isrb == 0){
+            document.getElementById('eyes').style.animation = 'rainbow .5s infinite';
+            isrb = 1;
         }else{
-         document.getElementById('frog').style.animation = 'rainbow 5s infinite';
+            document.getElementById('eyes').style.animation = 'infinite normal none';
+            isrb = 0;
         }
-
     }
  });

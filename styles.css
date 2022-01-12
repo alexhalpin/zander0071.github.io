@@ -6,10 +6,16 @@ body {
     white-space: nowrap;
   }
 
+.screen {
+    position: absolute;
+    top: 90px;
+    left: 135px;
+}
+
 .bubble {
     position: absolute;
     bottom: 190px;
-    right: 400px;
+    right: 380px;
     color: transparent;
 }
 
@@ -17,7 +23,7 @@ body {
     text-align: left;
     position: absolute;
     bottom: 243px;
-    right: 430px;
+    right: 410px;
 }
 
 .art {
@@ -31,9 +37,15 @@ body {
 .mushroom {
     position: absolute;
     bottom: 0px;
-    right: 510px;
+    right: 470px;
     margin-bottom: 0px;
     padding-bottom: 0px;
+}
+
+.pc{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
 }
 
 .mushbutton{
@@ -43,6 +55,25 @@ body {
     border: none;
     height: 80px;
     width: 110px;
+}
+
+.saturn{
+    position: absolute;
+    top: 45px;
+    right: 400px;
+}
+
+.earth{
+    position: absolute;
+    top: 100px;
+    right: 100px;
+}
+
+.eyes {
+    position: absolute;
+    color: white;
+    bottom: 220px;
+    right: 240px;
 }
 
 .ground {
@@ -74,158 +105,41 @@ a {
     100% {opacity: 0}
 }
 
-@keyframes rainbow {
-    0% {
-      color: #e87d7d;
+@keyframes rainbow{
+    100%,0%{
+        color: rgb(255,0,0);
     }
-    2% {
-      color: #e88a7d;
+    8%{
+        color: rgb(255,127,0);
     }
-    4% {
-      color: #e8977d;
+    16%{
+        color: rgb(255,255,0);
     }
-    6% {
-      color: #e8a47d;
+    25%{
+        color: rgb(127,255,0);
     }
-    8% {
-      color: #e8b07d;
+    33%{
+        color: rgb(0,255,0);
     }
-    10% {
-      color: #e8bd7d;
+    41%{
+        color: rgb(0,255,127);
     }
-    12% {
-      color: #e8ca7d;
+    50%{
+        color: rgb(0,255,255);
     }
-    14% {
-      color: #e8d77d;
+    58%{
+        color: rgb(0,127,255);
     }
-    16% {
-      color: #e8e47d;
+    66%{
+        color: rgb(0,0,255);
     }
-    18% {
-      color: #dfe87d;
+    75%{
+        color: rgb(127,0,255);
     }
-    20% {
-      color: #d3e87d;
+    83%{
+        color: rgb(255,0,255);
     }
-    22% {
-      color: #c6e87d;
+    91%{
+        color: rgb(255,0,127);
     }
-    24% {
-      color: #b9e87d;
-    }
-    26% {
-      color: #ace87d;
-    }
-    28% {
-      color: #9fe87d;
-    }
-    30% {
-      color: #92e87d;
-    }
-    32% {
-      color: #86e87d;
-    }
-    34% {
-      color: #7de881;
-    }
-    36% {
-      color: #7de88e;
-    }
-    38% {
-      color: #7de89b;
-    }
-    40% {
-      color: #7de8a8;
-    }
-    42% {
-      color: #7de8b5;
-    }
-    44% {
-      color: #7de8c1;
-    }
-    46% {
-      color: #7de8ce;
-    }
-    48% {
-      color: #7de8db;
-    }
-    50% {
-      color: #7de8e8;
-    }
-    52% {
-      color: #7ddbe8;
-    }
-    54% {
-      color: #7dcee8;
-    }
-    56% {
-      color: #7dc1e8;
-    }
-    58% {
-      color: #7db5e8;
-    }
-    60% {
-      color: #7da8e8;
-    }
-    62% {
-      color: #7d9be8;
-    }
-    64% {
-      color: #7d8ee8;
-    }
-    66% {
-      color: #7d81e8;
-    }
-    68% {
-      color: #867de8;
-    }
-    70% {
-      color: #927de8;
-    }
-    72% {
-      color: #9f7de8;
-    }
-    74% {
-      color: #ac7de8;
-    }
-    76% {
-      color: #b97de8;
-    }
-    78% {
-      color: #c67de8;
-    }
-    80% {
-      color: #d37de8;
-    }
-    82% {
-      color: #df7de8;
-    }
-    84% {
-      color: #e87de4;
-    }
-    86% {
-      color: #e87dd7;
-    }
-    88% {
-      color: #e87dca;
-    }
-    90% {
-      color: #e87dbd;
-    }
-    92% {
-      color: #e87db0;
-    }
-    94% {
-      color: #e87da4;
-    }
-    96% {
-      color: #e87d97;
-    }
-    98% {
-      color: #e87d8a;
-    }
-    100% {
-      color: #e87d7d;
-    }
-  }
+}
