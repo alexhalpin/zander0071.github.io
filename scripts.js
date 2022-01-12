@@ -8,10 +8,15 @@ document.addEventListener('DOMContentLoaded',function(event){
     var inputText = ["cd documents\\projects", "tree","Click one....  *rbt*"];
     var outputText = [
         "\n C:\\Users\\Alex\\Documents\\Projects>", 
-        "\n ├───<a href=\"project1.html \" >Project1.html</a>    \
+        "\n │                                                    \
+         \n ├───<a href=\"project1.html \" >Project1.html</a>    \
+         \n │                                                    \
          \n ├───<a href=\"project2.html \" >Project2.html</a>    \
+         \n │                                                    \
          \n ├───<a href=\"project3.html \" >Project3.html</a>    \
+         \n │                                                    \
          \n └───<a href=\"resume.html \" >Resume.html</a>    \
+         \n \
          \n C:\\Users\\Alex\\Documents\\Projects>"
          
         ];
