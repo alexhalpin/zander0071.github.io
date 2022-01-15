@@ -67,6 +67,8 @@ document.addEventListener('DOMContentLoaded',function(event){
         );
     }
 
+    speech("bubbletxt", 2, 0);
+
     typeWriter("input1", 0, 0, () => 
     printout("output1", 0, () =>
     typeWriter("input2", 1, 0, () =>
@@ -75,12 +77,12 @@ document.addEventListener('DOMContentLoaded',function(event){
     speech("bubbletxt", 2, 0)
     )))));
 
-    document.getElementById("mushbutton").addEventListener("click", () => {togglerainbow();});
+    document.getElementById("mushroom").addEventListener("click", () => {togglerainbow();});
 
     var isrb = 0;
     function togglerainbow() {
         if (isrb == 0){
-            document.getElementById('eyes').style.animation = 'rainbow .5s infinite';
+            document.getElementById('eyes').style.animation = 'rainbow .33s infinite';
             isrb = 1;
         }else{
             document.getElementById('eyes').style.animation = 'infinite normal none';
