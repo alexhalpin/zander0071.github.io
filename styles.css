@@ -10,7 +10,6 @@ body {
     position: absolute;
     top: 7%;
     left: 8%;
-    border: solid red;
     font-size: 1vw;
 }
 
@@ -83,7 +82,6 @@ body {
     bottom: 1.5vw;
     right: 35%;
     height: 11vw;
-    border: solid fuchsia
 }
 
 .ground{
