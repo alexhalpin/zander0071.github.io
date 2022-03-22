@@ -9,13 +9,13 @@ document.addEventListener('DOMContentLoaded',function(event){
     var outputText = [
         "\n C:\\Users\\Alex\\Documents\\Projects>", 
         "\n │                                                    \
-         \n ├───<a href=\"project1.html \" >Project1.html</a>    \
+         \n ├───<a href=\"bouncing/index.html \" >BouncingPhysics.html</a>    \
          \n │                                                    \
-         \n ├───<a href=\"project2.html \" >Project2.html</a>    \
+         \n ├───<a href=\"empty.html \" >Project2.html</a>    \
          \n │                                                    \
-         \n ├───<a href=\"project3.html \" >Project3.html</a>    \
+         \n ├───<a href=\"empty.html \" >Project3.html</a>    \
          \n │                                                    \
-         \n └───<a href=\"resume.html \" >Resume.html</a>    \
+         \n └───<a href=\"empty.html \" >Alex.html</a>    \
          \n \
          \n C:\\Users\\Alex\\Documents\\Projects>"
          
@@ -60,19 +60,18 @@ document.addEventListener('DOMContentLoaded',function(event){
 
     function appear(fncallback) {
         setTimeout( () => {
-            document.getElementById('bubble').style.color = '#C08497'},4000
+            document.getElementById('bubblediv').style.opacity = 100},4000
         );
         setTimeout( () => {
             fncallback();}, 4500
         );
     }
 
-    speech("bubbletxt", 2, 0);
 
     typeWriter("input1", 0, 0, () => 
     printout("output1", 0, () =>
     typeWriter("input2", 1, 0, () =>
-    printout("output2", 1, 
+    printout("output2", 1, () =>
     appear( () =>
     speech("bubbletxt", 2, 0)
     )))));

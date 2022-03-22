@@ -55,6 +55,7 @@ body {
     bottom: 15vw;
     right: 28%;
     color: transparent;
+    opacity: 0;
 }
 
 #bubbleimg{
