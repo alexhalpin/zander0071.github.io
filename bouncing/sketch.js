@@ -3,6 +3,7 @@ function setup() {
   cnv = createCanvas(windowWidth, windowHeight);
   colorMode(HSB,100,100,100);
   noStroke();
+  pixelDensity(1);
   
   gravity = createVector(0, 0.3);
 }
