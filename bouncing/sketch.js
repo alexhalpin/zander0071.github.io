@@ -9,7 +9,14 @@ function setup() {
 
 function draw() {
   background(50,20,100);
-  cnv.mousePressed(() => balls.push(new Ball(1, constrain(randomGaussian(10,10),5,100), mouseX, mouseY)));
+  // cnv.mousePressed(() => balls.push(new Ball(1, constrain(randomGaussian(10,10),5,100), mouseX, mouseY)));
+
+  if(mouseIsPressed == true){
+   balls.push(new Ball(1, constrain(randomGaussian(20,5),1,100), mouseX, mouseY)); 
+  }
+
+
+
   for (let ball of balls) {
     if(keyIsDown(LEFT_ARROW)&!keyIsDown(RIGHT_ARROW)){
       ball.applyForce(-0.8,0);

@@ -36,16 +36,20 @@ function Ball(m,r,x,y){
   this.bounce = function () {
     if((height - this.pos.y) <= (this.radius+1)){
       this.vel.y *= (-1 + this.radius*0.01);
+      this.vel.x *= (.99);
     }
     if(this.pos.y <= (this.radius+1)){
       this.vel.y *= (-1 + this.radius*0.01);
+      this.vel.x *= (.99);
     }
     
     if((width - this.pos.x) <= (this.radius+1)){
       this.vel.x *= (-1 + this.radius*0.01);
+      this.vel.y *= (.99);
     }
     if(this.pos.x <= (this.radius+1)){
       this.vel.x *= (-1 + this.radius*0.01);
+      this.vel.y *= (.99);
     }
   }
 }
