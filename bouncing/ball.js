@@ -23,12 +23,14 @@ function Ball(m,r,x,y){
     this.vel.add(this.acc);
     this.pos.add(this.vel);
     
+    this.netForce.mult(0);
     this.acc.mult(0);
     this.pos.y = constrain(this.pos.y, this.radius, height-this.radius);
+    this.pos.x = constrain(this.pos.x, this.radius, width-this.radius);
   }
   
   this.applyForce = function (fx,fy) {
-    this.netForce = createVector(fx,fy);
+    this.netForce.add(createVector(fx,fy));
   }
   
   this.bounce = function () {
@@ -37,6 +39,13 @@ function Ball(m,r,x,y){
     }
     if(this.pos.y <= (this.radius+1)){
       this.vel.y *= (-1 + this.radius*0.01);
+    }
+    
+    if((width - this.pos.x) <= (this.radius+1)){
+      this.vel.x *= (-1 + this.radius*0.01);
+    }
+    if(this.pos.x <= (this.radius+1)){
+      this.vel.x *= (-1 + this.radius*0.01);
     }
   }
 }
