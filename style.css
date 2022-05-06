@@ -1,82 +1,18 @@
-@font-face { 
-  font-family: "Aroly"; 
-  src: url('./wireframe.ttf'); 
-  font-display: swap;
-} 
-
-#debug{
-  border:  2px red;
+body {
+  margin: 0px;
 }
 
-#myname {
-  font-family: 'Roboto';
-  font-weight: 200;
-  padding: 0;
-  text-align: center;
+#text {
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
   width: 100%;
-  top: 5vh;
+  height: 100%;
   position: absolute;
-  color: white;
-  font-size: 70px;
-  border: inherit;
-}
 
-.preload * {
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -ms-transition: none !important;
-  -o-transition: none !important;
- }
-
-canvas{
-  position: fixed;
-  z-index: 0;
-  top: 0px;
-  left: 0px;
-}
-
-a:link, a:visited, a:hover, a:active {
-  text-decoration: inherit;
-  color: white;
-  cursor: pointer;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
   
 }
-
-.list {
-  border: inherit;
-  position: absolute;
-  color: white;
-  left: 11vw;
-  top: 23vh;
-  font-family: 'Roboto';
-  font-size: 45px;
-  font-weight: 200;
-}
-
-.label {
-  font-size: 45px;
-  font-weight: 200;
-}
-
-.items { 
-  position: relative;
-  top: 20px;
-  font-size: 80px;
-  line-height: 85%;
-  font-weight: 500;
-  
-  border: inherit;
-}
-.item {
-  margin-top: 5%;
-  
-  position: relative;
-  transition: 300ms;
-
-  border: inherit;
-}
-
-.item:hover {
-  transform: translateX(50px) scale(1.3);
-}
-
